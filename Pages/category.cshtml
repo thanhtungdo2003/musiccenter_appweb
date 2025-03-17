@@ -1,0 +1,120 @@
+﻿@page "uid={uid}"
+@model MusicCenterAPPWEB.Pages.categoryModel
+@{
+
+}
+
+<div class="main">
+
+    @if (Model.categoryUid != null)
+    {
+        <meta id="categoryUidTag" content="@Model.categoryUid"/>
+        <div class="main-content">
+            <div class="main-content type-card" id="top-records-categorypage-card">
+                <div class="title-card-main-content"><div class="un834rfniub"><b><a class="link-card" href="#">Top Music</a></b></div><div class="h34hn8cth3"></div></div>
+                <div class="type-card-content">
+                    <div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div><div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div><div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div>
+                    <div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div>
+                    <div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr />
+            <div class="main-content type-card" id="all-content-card">
+                <div class="title-card-main-content"><div class="un834rfniub"><b><a class="link-card" href="#">Musics</a></b></div><div class="h34hn8cth3"></div></div>
+                <div class="type-card-content">
+                    <div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div><div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div><div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div>
+                    <div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div>
+                    <div class="loader">
+                        <div class="wrapper">
+                            <div class="circle"></div>
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                            <div class="line-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div style="width: 60%; height: 400px; display:block; margin: 70px auto; justify-content:center; align-items:center; color:white">
+            <h1 style="font-size: 70px; font-weight: bold">404</h1>
+            <h2>Không tồn tại</h2>
+        </div>
+    }
+</div>

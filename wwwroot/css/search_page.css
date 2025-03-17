@@ -1,0 +1,135 @@
+﻿.search-page-header{
+    width: 100%;
+    height: 25%;
+    display: block
+}
+.search-page-title {
+    width: 100%;
+    height: 25px;
+    font-size: 17px;
+    color: #aeaeae;
+    display:flex;
+    margin: 10px 10px;
+}
+.search-page-title > div{
+    width: 30%;
+    height: 100%;
+    margin: auto 50px;
+    overflow: hidden
+}
+.search-page-control{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items:center;
+}
+.search-page-control-sorttype-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    color: #999999;
+    align-items: center;
+    justify-content: end;
+}
+
+.search-page-control-sorttype-btn{
+    width: 120px;
+    height: 40px;
+    background-color: #00000093;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: auto 6px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    &:hover{
+               background-color: #fa7720;
+               color:white;
+           }
+}
+.search-page-control-sortvalue-btn {
+    width: 100px;
+    height: 40px;
+    background-color: #00000042;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: auto 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover
+{
+    background-color: #fa7720;
+    color: white;
+}
+}
+.search-page-content {
+    width: 100%;
+    height: 75%;
+    display: block;
+    margin: 0px auto;
+    .search-item
+{
+    width: 95%;
+    height: 220px;
+    margin: 5px auto;
+    border-radius: 10px;
+    display: flex;
+    &:hover{
+               background-color: #00000016
+           }
+    .search-item-poster-container{
+                                     width: 30%;
+                                     height: 100%;
+                                     display:flex;
+                                     justify-content:center;
+                                     align-items:center;
+                                    
+                                     & img{
+                                              width: 200px;
+                                              height: 200px;
+                                              object-fit:cover;
+                                              border-radius:10px;
+                                              cursor: pointer;
+                                              box-shadow: 0px 0px 50px #0000005c;
+                                          }
+                                 }
+.search-item-info-container {
+    width: 70%;
+    height: 100%;
+    display: block;
+    .search-item-displayname{
+                                cursor:pointer;
+                                font-size: 27px;
+                                color: #dadada;
+                                text-decoration: none;
+                                &:hover{
+                                           color: #fa7720;
+                                       }
+                            }
+.search-item-views {
+    font-size: 16px;
+    color: #a1a1a1;
+}
+.search-item-artist-container{
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    & img{
+             width: 50px;
+             height: 50px;
+             object-fit: cover;
+             border-radius: 100em;
+             margin: auto 5px;
+         }
+.search-item-stagename {
+    font-size: 15px;
+    color: #b2b2b2a7;
+}
+
+}
+}
+}
+}

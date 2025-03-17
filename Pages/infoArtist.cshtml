@@ -1,0 +1,141 @@
+﻿@page "{id}"
+@model MusicCenterAPPWEB.Pages.infoArtistModel
+@{
+    ViewData["Title"] = "Thông tin nghệ sĩ";
+}
+<div class="main">
+    @if (Model.ArtistUid != null)
+    {
+        <div class="main-content">
+            <div class="artist-info-container" id="artist-info-container">
+                <div class="cover-info" id="cover-info"><div class="cover-info-overlay" id="corver-info-overlay"></div></div>
+                <canvas id="imageCanvas" style="display:none;"></canvas>
+                <div class="artist-avata-container" id="artist-avata-container"><img id="info-page-avata-artist"/></div>
+            </div>
+            <hr style="width: 80%; height: 2px; background-color: rgb(200, 200, 200, 0.4); margin: 0px auto;margin-top: 70px; box-shadow: 0px 10px 20px rgb(0,0,0, 0.3)">
+            <div class="artist-info-tabmenu">
+                <div id="tabmenu-info"><div class="tabmenu-value">Thông tin</div><div class="tabmenu-selection"></div></div>
+                <div id="tabmenu-records"><div class="tabmenu-value">Bài hát</div></div>
+                <div id="tabmenu-option"><div class="tabmenu-value">Tùy chọn</div></div>
+            </div>
+            <hr style="width: 80%; height: 2px; background-color: rgb(200, 200, 200, 0.4); margin: 0px auto; box-shadow: 0px 10px 20px rgb(0,0,0, 0.3)">
+            <div class="artist-info-main">
+                <div class="artist-info-tab" id="artist-info-tab-info">
+                    <div class="artist-info-tab-stagename">@Model.StageName</div>
+                    <div class="artist-info-tab-uid" style="color: rgb(200,200,200, 0.6); font-size: 12px; display:flex; justify-content:center">UID: @Model.ArtistUid <div id="copy-uid-btn" style="width: 20px; height: 20px; margin: auto 10px; cursor: pointer"><img style="width: 100%; height: 100%" src="~/lib/copy.png" /></div></div>
+                </div>
+                <div class="artist-info-tab" id="artist-info-tab-records">
+                    <div class="main-content type-card" id="top-page-card">
+                        <div class="title-card-main-content"><div class="un834rfniub"><b><a class="link-card" href="#">Top Music</a></b></div><div class="h34hn8cth3"></div></div>
+                        <div class="type-card-content">
+                            <div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div><div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div><div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div>
+                            <div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div>
+                            <div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="main-content type-card" id="all-content-card">
+                        <div class="title-card-main-content"><div class="un834rfniub"><b><a class="link-card" href="#">Musics</a></b></div><div class="h34hn8cth3"></div></div>
+                        <div class="type-card-content">
+                            <div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div><div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div><div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div>
+                            <div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div>
+                            <div class="loader">
+                                <div class="wrapper">
+                                    <div class="circle"></div>
+                                    <div class="line-1"></div>
+                                    <div class="line-2"></div>
+                                    <div class="line-3"></div>
+                                    <div class="line-4"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-info-tab" id="artist-info-tab-option">
+
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div style="width: 60%; height: 400px; display:block; margin: 70px auto; justify-content:center; align-items:center; color:white">
+            <h1 style="font-size: 70px; font-weight: bold">404</h1>
+            <h2>Không tồn tại</h2>
+        </div>
+    }
+</div>

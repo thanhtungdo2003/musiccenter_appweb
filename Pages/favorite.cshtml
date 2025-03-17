@@ -1,0 +1,75 @@
+﻿@page "favorite_list/{userName}&{sessionLoginUid}"
+@model favoriteModel;
+@{
+    ViewData["Title"] = "Danh sách phát";
+}
+@{
+}
+<div class="main">
+
+    @if (Model.UserName != null)
+    {
+        <div class="main-content">
+            <div class="favorite-page-header">
+                <div class="favorite-page-header-left">
+                    <img src="~/lib/bookmark.png" style="width: 60px; height: 60px; margin: 20px 20px" />
+                </div>
+                <div class="favorite-page-header-right">
+                    <div class="title-page-favorite">
+                        <input id="favorite-page-displayname" type="text" readonly class="favorite-page-displayname" value="Danh sách yêu thích" />
+                    </div>
+                    <div class="favorite-page-control">
+                        <div><img src="~/lib/play-svgrepo-com.svg" width="17px" height="17px" /><div></div>PlayAll</div>
+                    </div>
+                </div>
+            </div>
+            <div class="favorite-page-content" id="favorite-page-item-container">
+                <div class="favorite-page-item" style="background-color: transparent; cursor: default">
+                    <div class="favorite-item-col-1 favorite-page-item-poster"></div>
+                    <div class="favorite-item-col-2 favorite-page-item-name">Tên bài hát</div>
+                    <div class="favorite-item-col-3 favorite-page-item-artist">Nghệ sĩ</div>
+                    <div class="favorite-item-col-4 favorite-page-item-category">Thể loại</div>
+                    <div class="favorite-item-col-5 favorite-page-item-action">Hành động</div>
+                </div>
+             
+            </div>
+            <div class="audio-player" style="height: 10%">
+                <div class="timeline">
+                    <div class="progress"></div>
+                </div>
+                <div class="controls">               
+                    <div class="name-record-container">
+                        <div id="record-name">Music Song</div>
+                    </div>
+                    <div class="play-container">
+                        <div class="forward-button perious"><img src="~/lib/fast-forward.png" style="transform: rotate(-180deg)" /></div>
+                        <div class="toggle-play pause"><img src="~/lib/pause.png"/></div>
+                        <div class="forward-button next"><img src="~/lib/fast-forward.png" /></div>
+                    </div>
+                    <div class="volume-container">
+                        <div class="volume-button">
+                            <img src='~/lib/volume-max.png' />
+                        </div>
+
+                        <div class="volume-slider">
+                            <div class="volume-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="time">
+                        <div class="current">0:00</div>
+                        <div class="divider">/</div>
+                        <div class="length"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div style="width: 60%; height: 400px; display:block; margin: 70px auto; justify-content:center; align-items:center; color:white">
+            <h1 style="font-size: 70px; font-weight: bold">404</h1>
+            <h2>Không tồn tại</h2>
+        </div>
+    }
+</div>
+

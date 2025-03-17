@@ -1,0 +1,40 @@
+﻿@page "search_query={keyword}";
+@model MusicCenterAPPWEB.Pages.search_resultsModel
+@{
+    ViewData["Title"] = "Kết quả tìm kiếm";
+}
+<input type="button" id="data-search" style="display: none" value="@Model.rawKeyWord" />
+
+<div class="main">
+    <div class="main-content search-page-container">
+        <div class="search-page-header">
+            <div class="search-page-title">
+                <div id="search-title">Kết quả tìm kiếm cho: @Model.rawKeyWord</div>
+                <div id="search-amount">Tìm thấy 0 kết quả</div>
+            </div>
+            <hr style="width: 95%; height: 2px; background-color: rgb(0,0,0,0.2); margin: 5px auto;" />
+            <div class="search-page-control">
+                <div class="search-page-control-sorttype-container">
+                    <label>Sắp xếp theo</label>
+                    <div class="search-page-control-sorttype-btn" id="sortByViews">
+                        Lượt nghe
+                    </div>
+                    <div class="search-page-control-sorttype-btn" id="sortByLike">
+                        Lượt yêu thích
+                    </div>
+                    <label>Giá trị</label>
+                    <div class="search-page-control-sortvalue-btn" id="descending-sort">
+                        Giảm dần
+                    </div>
+                    <div class="search-page-control-sortvalue-btn" id="ascending-sort">
+                        Tăng dần
+                    </div>
+                </div>
+            </div>
+            <hr style="width: 95%; height: 2px; background-color: rgb(0,0,0,0.2); margin: 5px auto;" />
+
+        </div>
+        <div class="search-page-content" id="search-page-content">
+        </div>
+    </div>
+</div>

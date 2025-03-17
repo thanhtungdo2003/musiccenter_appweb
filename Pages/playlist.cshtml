@@ -1,0 +1,78 @@
+﻿@page "{userName}&{sessionLoginUid}&{playlistUid}"
+@model playlistModel;
+@{
+    ViewData["Title"] = "Danh sách phát";
+}
+@{
+}
+<div class="main">
+
+    @if (Model.PlaylistUid != null)
+    {
+        <div class="main-content">
+            <div class="playlist-page-header">
+                <div class="playlist-page-header-left">
+                    <img src="~/lib/playlist-minimalistic-2-svgrepo-com.svg" style="width: 120px; height: 120px; margin: 20px 20px" />
+                </div>
+                <div class="playlist-page-header-right">
+                    <div class="title-page-playlist">
+                        <input id="playlist-page-displayname" type="text" readonly class="playlist-page-displayname" value="@Model.playlistName" />
+                        <div id="rename-playlist-sumbit">Ok</div>
+                    </div>
+                    <div class="playlist-page-control">
+                        <div><img src="~/lib/play-svgrepo-com.svg" width="17px" height="17px" /><div></div>PlayAll</div>
+                        <div id="rename-playlist-btn"><img src="~/lib/rename-svgrepo-com.svg" width="17px" height="17px" /><div></div>Đổi tên</div>
+                        <div id="delete-playlist-button"><img src="~/lib/trash-can-with-cover-svgrepo-com.svg" width="17px" height="17px" /><div></div>Xóa bỏ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist-page-content" id="playlist-page-item-container">
+                <div class="playlist-page-item" style="background-color: transparent; cursor: default">
+                    <div class="playlist-item-col-1 playlist-page-item-poster"></div>
+                    <div class="playlist-item-col-2 playlist-page-item-name">Tên bài hát</div>
+                    <div class="playlist-item-col-3 playlist-page-item-artist">Nghệ sĩ</div>
+                    <div class="playlist-item-col-4 playlist-page-item-category">Thể loại</div>
+                    <div class="playlist-item-col-5 playlist-page-item-action">Hành động</div>
+                </div>
+             
+            </div>
+            <div class="audio-player" style="height: 10%">
+                <div class="timeline">
+                    <div class="progress"></div>
+                </div>
+                <div class="controls">               
+                    <div class="name-record-container">
+                        <div id="record-name">Music Song</div>
+                    </div>
+                    <div class="play-container">
+                        <div class="forward-button perious"><img src="~/lib/fast-forward.png" style="transform: rotate(-180deg)" /></div>
+                        <div class="toggle-play pause"><img src="~/lib/pause.png"/></div>
+                        <div class="forward-button next"><img src="~/lib/fast-forward.png" /></div>
+                    </div>
+                    <div class="volume-container">
+                        <div class="volume-button">
+                            <img src='~/lib/volume-max.png' />
+                        </div>
+
+                        <div class="volume-slider">
+                            <div class="volume-percentage"></div>
+                        </div>
+                    </div>
+                    <div class="time">
+                        <div class="current">0:00</div>
+                        <div class="divider">/</div>
+                        <div class="length"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div style="width: 60%; height: 400px; display:block; margin: 70px auto; justify-content:center; align-items:center; color:white">
+            <h1 style="font-size: 70px; font-weight: bold">404</h1>
+            <h2>Không tồn tại</h2>
+        </div>
+    }
+</div>
+

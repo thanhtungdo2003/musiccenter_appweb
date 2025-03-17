@@ -1,0 +1,134 @@
+﻿.playlist-page-header{
+    width: 95%;
+    min-height: 27%;
+    background-color: #2e2e2e;
+    border-radius:10px;
+    display: flex;
+    margin: 5px auto;
+}
+.playlist-page-header-left {
+    float: left;
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.playlist-page-header-right{
+    display: block;
+    float: right;
+    width: 65%;
+    height:100%;
+    margin: auto 10px;
+}
+.title-page-playlist {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin: 20px 10px;
+}
+.playlist-page-displayname {
+    width: 70%;
+    height: 100%;
+    font-size: 40px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+}
+#rename-playlist-sumbit{
+    display: none;
+    width: 28%;
+    height: 100%;
+    margin: auto 10px;
+    border-radius: 10px;
+    color: white;
+    background-color:#dc7349;
+    cursor: pointer;
+    justify-content:center;
+    text-align:center;
+    align-items: center;
+    place-items: center;
+}
+.playlist-page-displayname:focus {
+    outline: none;
+}
+.playlist-page-control{
+    display:flex;
+    width: 100%;
+    height: 30%;
+}
+.playlist-page-control > div{
+    display:flex;
+    width: 120px;
+    height: 40px;
+    margin: auto 5px;
+    background-color: #4f4f4f;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}.playlist-page-control > div:hover{
+    background-color: #dc7349;
+}
+    .playlist-page-control > div > div {
+        width: 10px;
+        height:100%;
+    }
+
+.playlist-page-content {
+    width: 95%;
+    height: 55%;
+    background-color: #00000012;
+    display: flex;
+    margin: 5px auto;
+    display: block;
+    overflow:hidden;
+    overflow-y:auto;
+}
+.playlist-page-item{
+    margin: 10px auto;
+    width: 98%;
+    height: 60px;
+    color: white;
+    display: flex;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+    .playlist-page-item:hover {
+        background-color: #00000026;
+    }
+.playlist-page-item > div {
+    display: flex;
+    height: 100%;
+    color: white;
+    justify-content:center;
+    align-items:center;
+    place-items:center;
+    margin: auto 10px;
+}
+.playlist-page-item-name {
+    text-overflow: ellipsis;
+    color: white;
+}
+.playlist-page-item > .playlist-page-item-poster > img {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 4px;
+}
+.playlist-page-item-action img {
+    margin: auto 2.5px;
+    &:hover
+    {
+        transform: scale(1.1);
+    }
+}
+.playlist-item-col-1 {width: 10%}
+.playlist-item-col-2 {width: 40%}
+.playlist-item-col-3 {width: 20%}
+.playlist-item-col-4 {width: 20%}
+.playlist-item-col-5 {width: 10%}

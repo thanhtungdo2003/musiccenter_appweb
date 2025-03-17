@@ -1,0 +1,61 @@
+﻿@page
+@model MusicCenterAPPWEB.Pages.premium_registerModel
+@{
+    ViewData["Title"] = "Mua gói VIP";
+}
+
+<div class="main">
+    <div class="main-content" id="main-content">
+        <div class="prepage-content-container">
+            <img src="~/lib/prebackground.png"/>
+            <div class="prepage-content">
+
+            </div>
+        </div>
+        <div class="prepage-pack-container">
+            <div class="prepage-pack-item" onclick="buyPremiumPack('30DAY')">
+                <div class="prepage-card-box">
+                    <span></span>
+                    <div class="prepage-card-content">
+                        <p>
+                            Mở khóa tất cả bài hát.
+                        </p>
+                        <div>
+                            <p class="pre-card-price">20.000 đ</p>/<p class="pre-card-ex">mouth</p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="prepage-pack-item" onclick="buyPremiumPack('1Y')">
+                <div class="prepage-card-box">
+                    <span></span>
+                    <div class="prepage-card-content">
+                        <p>
+                            Mở khóa tất cả bài hát.
+                        </p>
+                        <div>
+                            <p class="pre-card-price">100.000 đ</p>/<p class="pre-card-ex">year</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="prepage-pack-item" onclick="buyPremiumPack('NOEX')">
+                <div class="prepage-card-box">
+                    <span></span>
+                    <div class="prepage-card-content">
+                        <p>
+                            Mở khóa tất cả bài hát.
+                            Không thời hạn.
+                        </p>
+                        <div>
+                            <p class="pre-card-price">670.000 đ</p></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

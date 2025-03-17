@@ -1,0 +1,251 @@
+﻿@page "{id}"
+@model audioModel;
+@{
+    ViewData["Title"] = "Trình phát";
+}
+@{
+}
+<div class="main">
+
+@if (Model.displayName != null)
+{
+        <div class="main-content">
+            <div class="slide-info">
+                <div id="premium-notify">
+                    <img src="~/lib/crown-minimalistic-svgrepo-com.svg"/>
+                    <p>Bài hát yêu cầu trả phí</p>
+                </div>
+                <div class="cover-photo-container" id="cover-photo-container">
+                    <img id="record-cover-photo" src="" />
+                    <canvas id="imageCanvasCorverPhoto" style="display:none;"></canvas>
+                    <div class="cover-photo-overlay"></div>
+                </div>
+                <div class="header-info">
+                    <img id="poster-record" src="" />
+                    <div class="record-info">
+                        <br />
+                        <br />
+                        <br />
+                        <span id="record-title">@Model.displayName</span>
+                        <br />
+                        <div class="record-sublinetext">
+                            <span id="record-stageName">Nghệ Sĩ: @Model.artist.StageName</span>
+                            |
+                            <span id="record-views-display">Lượt nghe: @Model.views</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="control-audio">
+                <div class="audio-player">
+                    <div class="timeline">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="controls">
+                        <div class="play-container">
+                            <div class="forward-button perious"><img src="~/lib/fast-forward.png" style="transform: rotate(-180deg)" /></div>
+                            <div class="toggle-play pause"><img src="~/lib/pause.png" /></div>
+                            <div class="forward-button next"><img src="~/lib/fast-forward.png"/></div>
+                        </div>
+                        <div class="name-record-container">
+                            <div id="record-name">Music Song</div>
+                        </div>
+                        <div class="volume-container">
+                            <div class="volume-button">
+                                <img src='/lib/audio-max-svgrepo-com.svg' />
+                            </div>
+
+                            <div class="volume-slider">
+                                <div class="volume-percentage"></div>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <div class="current">0:00</div>
+                            <div class="divider">/</div>
+                            <div class="length"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interact-audio">
+                    <div class="artist-region">
+                        <div class="artist-avata-auido">
+                            <img id="img-avata-artist-auido" />
+                        </div>
+                        <div class="info-artist-audio">
+                            <span id="title-artist-audio" style="color:white; font-size: 17px;">@Model.artist.StageName</span><br />
+                            <span id="total-listen-audio" style="color: gray; font-size: 14px">Tổng lượt nghe: </span>
+                        </div>
+                    </div>
+                    <div class="favourite-control">
+                        <div class="favourite-button">
+                            <img src="~/lib/heart-non-com.svg" />
+                            <span id="favourite-total" style="color: rgb(127, 127, 127); margin:auto; font-size:15px">0</span>
+                        </div>
+                        <div class="playlist-add-button" id="playlist-add-button">
+                            <div style="height: 100%; display: flex; align-items:center; font-size: 33px; font-weight:bold">
+                                +
+                            </div>
+                            <span>Add to playlist</span>
+                        </div>
+                    </div>
+                    <div class="playlist-control">
+                    </div>
+                </div>
+            </div>
+            <div class="record-artist-container">
+                <h4>Các ca khúc của Nghệ sĩ</h4>
+                <div class="records-list-artist-container" id="records-list-artist-container">
+                    <div class="record-artist-item-title" style="background-color: transparent; cursor: default">
+                        <div class="record-artist-item-col-1 record-artist-item-poster"></div>
+                        <div class="record-artist-item-col-2 record-artist-item-name">Tên bài hát</div>
+                        <div class="record-artist-item-col-4 record-artist-item-category">Thể loại</div>
+                        <div class="record-artist-item-col-5 record-artist-item-action">Hành động</div>
+                    </div>
+                </div>
+                <div class="record-list-artist-control-container">
+                    
+                </div>
+            </div>
+            <div class="comment-container">
+                <div class="comment-container-title-bar" style="width: 100%; height: 55px; align-items: center; display: flex; margin: auto 10px;">
+                    <h id="comment-title" style="color: rgb(220,220,220); font-size: 23px; font-weight:700">Comments</h>
+                </div>
+                <hr style="width: 100%; background-color: rgb(140,140,140); margin: 0px auto; height: 2px">
+                <div class="comment-box" id="comment-box">
+                    <div class="comment-textbox-container">
+                        <div class="comment-textbox-avata">
+                            <img/>
+                        </div>
+                        <input id="comment-textbox" type="text" placeholder="What do you think about this work?"/>
+                        <div class="comment-sumbit-container">
+                            <input id="comment-send-btn" type="button" value="Send"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <hr />
+                <div class="main-content type-card" id="top-card">
+                    <div class="title-card-main-content"><div class="un834rfniub"><b><a class="link-card" href="#">Đề Xuất</a></b></div><div class="h34hn8cth3"><a class="showall-link" href="/allRecord">Xem tất cả</a></div></div>
+                    <div class="type-card-content">
+                        <div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div><div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div><div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div>
+                        <div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div>
+                        <div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div>
+                        <div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content type-card" id="new-product-card">
+                    <div class="title-card-main-content"><div class="un834rfniub"><b><a class="link-card" href="#">New Product</a></b></div><div class="h34hn8cth3"><a class="showall-link" href="/allRecord">Xem tất cả</a></div></div>
+                    <div class="type-card-content">
+                        <div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div><div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div><div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div>
+                        <div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div>
+                        <div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div>
+                        <div class="loader">
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                                <div class="line-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    }
+    else
+    {
+        <div style="width: 60%; height: 400px; display:block; margin: 70px auto; justify-content:center; align-items:center; color:white">
+            <h1 style="font-size: 70px; font-weight: bold">404</h1>
+            <h2>Không tồn tại</h2>
+        </div>
+    }
+</div>

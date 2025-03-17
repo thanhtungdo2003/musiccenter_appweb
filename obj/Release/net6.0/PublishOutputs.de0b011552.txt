@@ -1,0 +1,7 @@
+C:\Users\Thanh Tung\source\repos\MusicCenterAPPWEB\obj\Release\net6.0\PubTmp\Out\MusicCenterAPPWEB.exe
+C:\Users\Thanh Tung\source\repos\MusicCenterAPPWEB\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Thanh Tung\source\repos\MusicCenterAPPWEB\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\Thanh Tung\source\repos\MusicCenterAPPWEB\obj\Release\net6.0\PubTmp\Out\MusicCenterAPPWEB.dll
+C:\Users\Thanh Tung\source\repos\MusicCenterAPPWEB\obj\Release\net6.0\PubTmp\Out\MusicCenterAPPWEB.deps.json
+C:\Users\Thanh Tung\source\repos\MusicCenterAPPWEB\obj\Release\net6.0\PubTmp\Out\MusicCenterAPPWEB.runtimeconfig.json
+C:\Users\Thanh Tung\source\repos\MusicCenterAPPWEB\obj\Release\net6.0\PubTmp\Out\MusicCenterAPPWEB.pdb
